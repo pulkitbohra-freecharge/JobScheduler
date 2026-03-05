@@ -1731,3 +1731,578 @@ Caused by: java.lang.ClassNotFoundException: com.JobSchedulingNotification.JobSc
 2026-03-05 13:32:39 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
 2026-03-05 13:33:37 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-1 - Shutdown initiated...
 2026-03-05 13:33:37 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-1 - Shutdown completed.
+2026-03-05 16:12:49 [background-preinit] INFO  o.h.validator.internal.util.Version [REQ:] - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-05 16:12:49 [restartedMain] INFO  c.J.J.JobSchedulingProjectApplication [REQ:] - Starting JobSchedulingProjectApplication using Java 17.0.12 with PID 30448 (C:\Users\pulkit.bohra.in\Desktop\JobSchedulingProject\JobSchedulingProject\target\classes started by pulkit.bohra.in in C:\Users\pulkit.bohra.in\Desktop\JobSchedulingProject)
+2026-03-05 16:12:49 [restartedMain] INFO  c.J.J.JobSchedulingProjectApplication [REQ:] - No active profile set, falling back to 1 default profile: "default"
+2026-03-05 16:12:52 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol [REQ:] - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-05 16:12:52 [restartedMain] INFO  o.a.catalina.core.StandardService [REQ:] - Starting service [Tomcat]
+2026-03-05 16:12:52 [restartedMain] INFO  o.a.catalina.core.StandardEngine [REQ:] - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-03-05 16:12:52 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [REQ:] - Initializing Spring embedded WebApplicationContext
+2026-03-05 16:12:52 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper [REQ:] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-05 16:12:53 [restartedMain] INFO  org.hibernate.Version [REQ:] - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-05 16:12:53 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator [REQ:] - HHH000026: Second-level cache disabled
+2026-03-05 16:12:53 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-1 - Starting...
+2026-03-05 16:12:54 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool [REQ:] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1653d65c
+2026-03-05 16:12:54 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-1 - Start completed.
+2026-03-05 16:12:55 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator [REQ:] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-05 16:12:56 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol [REQ:] - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-05 16:12:56 [restartedMain] INFO  c.J.J.JobSchedulingProjectApplication [REQ:] - Started JobSchedulingProjectApplication in 7.215 seconds (process running for 8.378)
+2026-03-05 16:12:56 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-05 16:13:00 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [REQ:] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-05 16:13:56 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-05 16:14:56 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-05 16:15:50 [Thread-5] INFO  o.a.coyote.http11.Http11NioProtocol [REQ:] - Stopping ProtocolHandler ["http-nio-8080"]
+2026-03-05 16:15:50 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-1 - Shutdown initiated...
+2026-03-05 16:15:50 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-1 - Shutdown completed.
+2026-03-05 16:15:50 [restartedMain] INFO  c.J.J.JobSchedulingProjectApplication [REQ:] - Starting JobSchedulingProjectApplication using Java 17.0.12 with PID 30448 (C:\Users\pulkit.bohra.in\Desktop\JobSchedulingProject\JobSchedulingProject\target\classes started by pulkit.bohra.in in C:\Users\pulkit.bohra.in\Desktop\JobSchedulingProject)
+2026-03-05 16:15:50 [restartedMain] INFO  c.J.J.JobSchedulingProjectApplication [REQ:] - No active profile set, falling back to 1 default profile: "default"
+2026-03-05 16:15:51 [restartedMain] ERROR o.s.boot.SpringApplication [REQ:] - Application run failed
+java.lang.IllegalStateException: Unable to load cache item
+	at org.springframework.cglib.core.internal.LoadingCache.createEntry(LoadingCache.java:75)
+	at org.springframework.cglib.core.internal.LoadingCache.get(LoadingCache.java:34)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData.get(AbstractClassGenerator.java:130)
+	at org.springframework.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:317)
+	at org.springframework.cglib.proxy.Enhancer.createHelper(Enhancer.java:562)
+	at org.springframework.cglib.proxy.Enhancer.createClass(Enhancer.java:407)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.createClass(ConfigurationClassEnhancer.java:138)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.enhance(ConfigurationClassEnhancer.java:109)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.enhanceConfigurationClasses(ConfigurationClassPostProcessor.java:533)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanFactory(ConfigurationClassPostProcessor.java:310)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:363)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:153)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.JobSchedulingNotification.JobSchedulingProject.JobSchedulingProjectApplication.main(JobSchedulingProjectApplication.java:16)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.NoClassDefFoundError: com/JobSchedulingNotification/JobSchedulingProject/interceptor/RoleAuthorizationInterceptor
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3373)
+	at java.base/java.lang.Class.getDeclaredConstructors(Class.java:2555)
+	at org.springframework.cglib.proxy.Enhancer.generateClass(Enhancer.java:655)
+	at org.springframework.cglib.transform.TransformingClassGenerator.generateClass(TransformingClassGenerator.java:35)
+	at org.springframework.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:26)
+	at org.springframework.cglib.core.ClassLoaderAwareGeneratorStrategy.generate(ClassLoaderAwareGeneratorStrategy.java:57)
+	at org.springframework.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:366)
+	at org.springframework.cglib.proxy.Enhancer.generate(Enhancer.java:575)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData.lambda$new$1(AbstractClassGenerator.java:107)
+	at org.springframework.cglib.core.internal.LoadingCache.lambda$createEntry$1(LoadingCache.java:52)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.springframework.cglib.core.internal.LoadingCache.createEntry(LoadingCache.java:57)
+	... 25 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.JobSchedulingNotification.JobSchedulingProject.interceptor.RoleAuthorizationInterceptor
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:467)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	... 38 common frames omitted
+2026-03-05 16:15:55 [restartedMain] INFO  c.J.J.JobSchedulingProjectApplication [REQ:] - Starting JobSchedulingProjectApplication using Java 17.0.12 with PID 30448 (C:\Users\pulkit.bohra.in\Desktop\JobSchedulingProject\JobSchedulingProject\target\classes started by pulkit.bohra.in in C:\Users\pulkit.bohra.in\Desktop\JobSchedulingProject)
+2026-03-05 16:15:55 [restartedMain] INFO  c.J.J.JobSchedulingProjectApplication [REQ:] - No active profile set, falling back to 1 default profile: "default"
+2026-03-05 16:15:56 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol [REQ:] - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-05 16:15:56 [restartedMain] INFO  o.a.catalina.core.StandardService [REQ:] - Starting service [Tomcat]
+2026-03-05 16:15:56 [restartedMain] INFO  o.a.catalina.core.StandardEngine [REQ:] - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-03-05 16:15:56 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [REQ:] - Initializing Spring embedded WebApplicationContext
+2026-03-05 16:15:56 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper [REQ:] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-05 16:15:56 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator [REQ:] - HHH000026: Second-level cache disabled
+2026-03-05 16:15:56 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-2 - Starting...
+2026-03-05 16:15:56 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool [REQ:] - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5c5ef34e
+2026-03-05 16:15:56 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-2 - Start completed.
+2026-03-05 16:15:56 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator [REQ:] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-05 16:15:56 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol [REQ:] - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-05 16:15:56 [restartedMain] INFO  c.J.J.JobSchedulingProjectApplication [REQ:] - Started JobSchedulingProjectApplication in 1.406 seconds (process running for 188.668)
+2026-03-05 16:15:56 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-05 16:16:29 [Thread-7] INFO  o.a.coyote.http11.Http11NioProtocol [REQ:] - Stopping ProtocolHandler ["http-nio-8080"]
+2026-03-05 16:16:29 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-2 - Shutdown initiated...
+2026-03-05 16:16:29 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-2 - Shutdown completed.
+2026-03-05 16:16:29 [restartedMain] INFO  c.J.J.JobSchedulingProjectApplication [REQ:] - Starting JobSchedulingProjectApplication using Java 17.0.12 with PID 30448 (C:\Users\pulkit.bohra.in\Desktop\JobSchedulingProject\JobSchedulingProject\target\classes started by pulkit.bohra.in in C:\Users\pulkit.bohra.in\Desktop\JobSchedulingProject)
+2026-03-05 16:16:29 [restartedMain] INFO  c.J.J.JobSchedulingProjectApplication [REQ:] - No active profile set, falling back to 1 default profile: "default"
+2026-03-05 16:16:30 [restartedMain] ERROR o.s.boot.SpringApplication [REQ:] - Application run failed
+java.lang.IllegalStateException: Unable to load cache item
+	at org.springframework.cglib.core.internal.LoadingCache.createEntry(LoadingCache.java:75)
+	at org.springframework.cglib.core.internal.LoadingCache.get(LoadingCache.java:34)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData.get(AbstractClassGenerator.java:130)
+	at org.springframework.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:317)
+	at org.springframework.cglib.proxy.Enhancer.createHelper(Enhancer.java:562)
+	at org.springframework.cglib.proxy.Enhancer.createClass(Enhancer.java:407)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.createClass(ConfigurationClassEnhancer.java:138)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.enhance(ConfigurationClassEnhancer.java:109)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.enhanceConfigurationClasses(ConfigurationClassPostProcessor.java:533)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanFactory(ConfigurationClassPostProcessor.java:310)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:363)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:153)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.JobSchedulingNotification.JobSchedulingProject.JobSchedulingProjectApplication.main(JobSchedulingProjectApplication.java:16)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.NoClassDefFoundError: com/JobSchedulingNotification/JobSchedulingProject/interceptor/RoleAuthorizationInterceptor
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3373)
+	at java.base/java.lang.Class.getDeclaredConstructors(Class.java:2555)
+	at org.springframework.cglib.proxy.Enhancer.generateClass(Enhancer.java:655)
+	at org.springframework.cglib.transform.TransformingClassGenerator.generateClass(TransformingClassGenerator.java:35)
+	at org.springframework.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:26)
+	at org.springframework.cglib.core.ClassLoaderAwareGeneratorStrategy.generate(ClassLoaderAwareGeneratorStrategy.java:57)
+	at org.springframework.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:366)
+	at org.springframework.cglib.proxy.Enhancer.generate(Enhancer.java:575)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData.lambda$new$1(AbstractClassGenerator.java:107)
+	at org.springframework.cglib.core.internal.LoadingCache.lambda$createEntry$1(LoadingCache.java:52)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.springframework.cglib.core.internal.LoadingCache.createEntry(LoadingCache.java:57)
+	... 25 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.JobSchedulingNotification.JobSchedulingProject.interceptor.RoleAuthorizationInterceptor
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:467)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	... 38 common frames omitted
+2026-03-05 16:16:34 [restartedMain] INFO  c.J.J.JobSchedulingProjectApplication [REQ:] - Starting JobSchedulingProjectApplication using Java 17.0.12 with PID 30448 (C:\Users\pulkit.bohra.in\Desktop\JobSchedulingProject\JobSchedulingProject\target\classes started by pulkit.bohra.in in C:\Users\pulkit.bohra.in\Desktop\JobSchedulingProject)
+2026-03-05 16:16:34 [restartedMain] INFO  c.J.J.JobSchedulingProjectApplication [REQ:] - No active profile set, falling back to 1 default profile: "default"
+2026-03-05 16:16:35 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol [REQ:] - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-05 16:16:35 [restartedMain] INFO  o.a.catalina.core.StandardService [REQ:] - Starting service [Tomcat]
+2026-03-05 16:16:35 [restartedMain] INFO  o.a.catalina.core.StandardEngine [REQ:] - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-03-05 16:16:35 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [REQ:] - Initializing Spring embedded WebApplicationContext
+2026-03-05 16:16:35 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper [REQ:] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-05 16:16:35 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator [REQ:] - HHH000026: Second-level cache disabled
+2026-03-05 16:16:35 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-3 - Starting...
+2026-03-05 16:16:35 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool [REQ:] - HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3adcefdf
+2026-03-05 16:16:35 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-3 - Start completed.
+2026-03-05 16:16:35 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator [REQ:] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-05 16:16:36 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol [REQ:] - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-05 16:16:36 [restartedMain] INFO  c.J.J.JobSchedulingProjectApplication [REQ:] - Started JobSchedulingProjectApplication in 1.694 seconds (process running for 227.895)
+2026-03-05 16:16:36 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-05 16:16:37 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [REQ:] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-05 16:16:37 [http-nio-8080-exec-1] INFO  c.J.J.controller.AuthController [REQ:159e0e4c-8928-4eab-984a-221f9fd4f0dc] - Login API called for email: Pulkit@gmail.com
+2026-03-05 16:16:37 [http-nio-8080-exec-1] INFO  c.J.J.controller.AuthController [REQ:159e0e4c-8928-4eab-984a-221f9fd4f0dc] - User login successful:email=Pulkit@gmail.com, username=Pulkit, userId=4e2cc0fc-18a5-43f0-8c1a-96489714087d
+2026-03-05 16:17:36 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-05 16:18:00 [Thread-14] INFO  o.a.coyote.http11.Http11NioProtocol [REQ:] - Stopping ProtocolHandler ["http-nio-8080"]
+2026-03-05 16:18:00 [Thread-14] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-3 - Shutdown initiated...
+2026-03-05 16:18:00 [Thread-14] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-3 - Shutdown completed.
+2026-03-05 16:18:00 [restartedMain] INFO  c.J.J.JobSchedulingProjectApplication [REQ:] - Starting JobSchedulingProjectApplication using Java 17.0.12 with PID 30448 (C:\Users\pulkit.bohra.in\Desktop\JobSchedulingProject\JobSchedulingProject\target\classes started by pulkit.bohra.in in C:\Users\pulkit.bohra.in\Desktop\JobSchedulingProject)
+2026-03-05 16:18:00 [restartedMain] INFO  c.J.J.JobSchedulingProjectApplication [REQ:] - No active profile set, falling back to 1 default profile: "default"
+2026-03-05 16:18:01 [restartedMain] ERROR o.s.boot.SpringApplication [REQ:] - Application run failed
+java.lang.IllegalStateException: Unable to load cache item
+	at org.springframework.cglib.core.internal.LoadingCache.createEntry(LoadingCache.java:75)
+	at org.springframework.cglib.core.internal.LoadingCache.get(LoadingCache.java:34)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData.get(AbstractClassGenerator.java:130)
+	at org.springframework.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:317)
+	at org.springframework.cglib.proxy.Enhancer.createHelper(Enhancer.java:562)
+	at org.springframework.cglib.proxy.Enhancer.createClass(Enhancer.java:407)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.createClass(ConfigurationClassEnhancer.java:138)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.enhance(ConfigurationClassEnhancer.java:109)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.enhanceConfigurationClasses(ConfigurationClassPostProcessor.java:533)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanFactory(ConfigurationClassPostProcessor.java:310)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:363)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:153)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.JobSchedulingNotification.JobSchedulingProject.JobSchedulingProjectApplication.main(JobSchedulingProjectApplication.java:16)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.NoClassDefFoundError: com/JobSchedulingNotification/JobSchedulingProject/interceptor/RoleAuthorizationInterceptor
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3373)
+	at java.base/java.lang.Class.getDeclaredConstructors(Class.java:2555)
+	at org.springframework.cglib.proxy.Enhancer.generateClass(Enhancer.java:655)
+	at org.springframework.cglib.transform.TransformingClassGenerator.generateClass(TransformingClassGenerator.java:35)
+	at org.springframework.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:26)
+	at org.springframework.cglib.core.ClassLoaderAwareGeneratorStrategy.generate(ClassLoaderAwareGeneratorStrategy.java:57)
+	at org.springframework.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:366)
+	at org.springframework.cglib.proxy.Enhancer.generate(Enhancer.java:575)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData.lambda$new$1(AbstractClassGenerator.java:107)
+	at org.springframework.cglib.core.internal.LoadingCache.lambda$createEntry$1(LoadingCache.java:52)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.springframework.cglib.core.internal.LoadingCache.createEntry(LoadingCache.java:57)
+	... 25 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.JobSchedulingNotification.JobSchedulingProject.interceptor.RoleAuthorizationInterceptor
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:467)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	... 38 common frames omitted
+2026-03-05 16:18:03 [restartedMain] INFO  c.J.J.JobSchedulingProjectApplication [REQ:] - Starting JobSchedulingProjectApplication using Java 17.0.12 with PID 30448 (C:\Users\pulkit.bohra.in\Desktop\JobSchedulingProject\JobSchedulingProject\target\classes started by pulkit.bohra.in in C:\Users\pulkit.bohra.in\Desktop\JobSchedulingProject)
+2026-03-05 16:18:03 [restartedMain] INFO  c.J.J.JobSchedulingProjectApplication [REQ:] - No active profile set, falling back to 1 default profile: "default"
+2026-03-05 16:18:04 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol [REQ:] - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-05 16:18:04 [restartedMain] INFO  o.a.catalina.core.StandardService [REQ:] - Starting service [Tomcat]
+2026-03-05 16:18:04 [restartedMain] INFO  o.a.catalina.core.StandardEngine [REQ:] - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-03-05 16:18:04 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [REQ:] - Initializing Spring embedded WebApplicationContext
+2026-03-05 16:18:04 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper [REQ:] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-05 16:18:04 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator [REQ:] - HHH000026: Second-level cache disabled
+2026-03-05 16:18:04 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-4 - Starting...
+2026-03-05 16:18:04 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool [REQ:] - HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@31b6a946
+2026-03-05 16:18:04 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-4 - Start completed.
+2026-03-05 16:18:04 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator [REQ:] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-05 16:18:05 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol [REQ:] - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-05 16:18:05 [restartedMain] INFO  c.J.J.JobSchedulingProjectApplication [REQ:] - Started JobSchedulingProjectApplication in 1.242 seconds (process running for 316.91)
+2026-03-05 16:18:26 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [REQ:] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-05 16:19:05 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-05 16:20:05 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-05 16:21:05 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-05 16:25:19 [HikariPool-4 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool [REQ:] - HikariPool-4 - Thread starvation or clock leap detected (housekeeper delta=3m44s329ms795µs400ns).
+2026-03-05 16:25:19 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-05 16:25:34 [http-nio-8080-exec-5] INFO  c.J.J.controller.AuthController [REQ:29d4c62a-73a1-4f09-97be-6fedcd501559] - Login API called for email: manager@gmail.com
+2026-03-05 16:25:34 [http-nio-8080-exec-5] INFO  c.J.J.controller.AuthController [REQ:29d4c62a-73a1-4f09-97be-6fedcd501559] - User login successful:email=manager@gmail.com, username=Manager, userId=8abdccda-f872-492c-8e93-39102f2130c2
+2026-03-05 16:26:05 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-05 16:26:05 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Webhook URL: https://chat.googleapis.com/v1/spaces/AAQAwBis3lE/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=R9AoxRqZ-taUFkSAQpK_3O7ekgNVGLmIaRgX4KDMqqQ
+2026-03-05 16:26:06 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Job 1 executed
+2026-03-05 16:26:06 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Completed
+2026-03-05 16:27:05 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-05 16:27:05 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Webhook URL: https://chat.googleapis.com/v1/spaces/AAQAwBis3lE/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=R9AoxRqZ-taUFkSAQpK_3O7ekgNVGLmIaRgX4KDMqqQ
+2026-03-05 16:27:06 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Job 1 executed
+2026-03-05 16:27:06 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Completed
+2026-03-05 16:28:05 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-05 16:28:05 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Webhook URL: https://chat.googleapis.com/v1/spaces/AAQAwBis3lE/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=R9AoxRqZ-taUFkSAQpK_3O7ekgNVGLmIaRgX4KDMqqQ
+2026-03-05 16:28:05 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Job 1 executed
+2026-03-05 16:28:05 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Completed
+2026-03-05 16:28:05 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Webhook URL: https://chat.googleapis.com/v1/spaces/AAQAwBis3lE/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=R9AoxRqZ-taUFkSAQpK_3O7ekgNVGLmIaRgX4KDMqqQ
+2026-03-05 16:28:06 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Job 2 executed
+2026-03-05 16:28:06 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Completed
+2026-03-05 16:28:06 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Webhook URL: https://chat.googleapis.com/v1/spaces/AAQAwBis3lE/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=R9AoxRqZ-taUFkSAQpK_3O7ekgNVGLmIaRgX4KDMqqQ
+2026-03-05 16:28:07 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Job 3 executed
+2026-03-05 16:28:07 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Completed
+2026-03-05 16:29:05 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-05 16:29:05 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Webhook URL: https://chat.googleapis.com/v1/spaces/AAQAwBis3lE/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=R9AoxRqZ-taUFkSAQpK_3O7ekgNVGLmIaRgX4KDMqqQ
+2026-03-05 16:29:05 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Job 1 executed
+2026-03-05 16:29:05 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Completed
+2026-03-05 16:29:13 [Thread-21] INFO  o.a.coyote.http11.Http11NioProtocol [REQ:] - Stopping ProtocolHandler ["http-nio-8080"]
+2026-03-05 16:29:13 [Thread-21] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-4 - Shutdown initiated...
+2026-03-05 16:29:13 [Thread-21] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-4 - Shutdown completed.
+2026-03-05 16:29:13 [restartedMain] INFO  c.J.J.JobSchedulingProjectApplication [REQ:] - Starting JobSchedulingProjectApplication using Java 17.0.12 with PID 30448 (C:\Users\pulkit.bohra.in\Desktop\JobSchedulingProject\JobSchedulingProject\target\classes started by pulkit.bohra.in in C:\Users\pulkit.bohra.in\Desktop\JobSchedulingProject)
+2026-03-05 16:29:13 [restartedMain] INFO  c.J.J.JobSchedulingProjectApplication [REQ:] - No active profile set, falling back to 1 default profile: "default"
+2026-03-05 16:29:14 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol [REQ:] - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-05 16:29:14 [restartedMain] INFO  o.a.catalina.core.StandardService [REQ:] - Starting service [Tomcat]
+2026-03-05 16:29:14 [restartedMain] INFO  o.a.catalina.core.StandardEngine [REQ:] - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-03-05 16:29:14 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [REQ:] - Initializing Spring embedded WebApplicationContext
+2026-03-05 16:29:14 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper [REQ:] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-05 16:29:14 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator [REQ:] - HHH000026: Second-level cache disabled
+2026-03-05 16:29:14 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-5 - Starting...
+2026-03-05 16:29:14 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool [REQ:] - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3b597364
+2026-03-05 16:29:14 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-5 - Start completed.
+2026-03-05 16:29:14 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator [REQ:] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-05 16:29:15 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol [REQ:] - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-05 16:29:15 [restartedMain] INFO  c.J.J.JobSchedulingProjectApplication [REQ:] - Started JobSchedulingProjectApplication in 1.634 seconds (process running for 987.137)
+2026-03-05 16:29:17 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [REQ:] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-05 16:29:17 [Thread-28] INFO  o.a.coyote.http11.Http11NioProtocol [REQ:] - Stopping ProtocolHandler ["http-nio-8080"]
+2026-03-05 16:29:17 [Thread-28] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-5 - Shutdown initiated...
+2026-03-05 16:29:17 [Thread-28] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-5 - Shutdown completed.
+2026-03-05 16:29:18 [restartedMain] INFO  c.J.J.JobSchedulingProjectApplication [REQ:] - Starting JobSchedulingProjectApplication using Java 17.0.12 with PID 30448 (C:\Users\pulkit.bohra.in\Desktop\JobSchedulingProject\JobSchedulingProject\target\classes started by pulkit.bohra.in in C:\Users\pulkit.bohra.in\Desktop\JobSchedulingProject)
+2026-03-05 16:29:18 [restartedMain] INFO  c.J.J.JobSchedulingProjectApplication [REQ:] - No active profile set, falling back to 1 default profile: "default"
+2026-03-05 16:29:18 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol [REQ:] - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-05 16:29:18 [restartedMain] INFO  o.a.catalina.core.StandardService [REQ:] - Starting service [Tomcat]
+2026-03-05 16:29:18 [restartedMain] INFO  o.a.catalina.core.StandardEngine [REQ:] - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-03-05 16:29:18 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [REQ:] - Initializing Spring embedded WebApplicationContext
+2026-03-05 16:29:18 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper [REQ:] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-05 16:29:18 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator [REQ:] - HHH000026: Second-level cache disabled
+2026-03-05 16:29:18 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-6 - Starting...
+2026-03-05 16:29:18 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool [REQ:] - HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@77c3447c
+2026-03-05 16:29:18 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-6 - Start completed.
+2026-03-05 16:29:19 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator [REQ:] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-05 16:29:19 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol [REQ:] - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-05 16:29:19 [restartedMain] INFO  c.J.J.JobSchedulingProjectApplication [REQ:] - Started JobSchedulingProjectApplication in 1.731 seconds (process running for 991.585)
+2026-03-05 16:29:41 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [REQ:] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-05 16:30:19 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-05 16:30:19 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Webhook URL: https://chat.googleapis.com/v1/spaces/AAQAwBis3lE/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=R9AoxRqZ-taUFkSAQpK_3O7ekgNVGLmIaRgX4KDMqqQ
+2026-03-05 16:30:20 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Job 1 executed
+2026-03-05 16:30:20 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Completed
+2026-03-05 16:30:20 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Webhook URL: https://chat.googleapis.com/v1/spaces/AAQAwBis3lE/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=R9AoxRqZ-taUFkSAQpK_3O7ekgNVGLmIaRgX4KDMqqQ
+2026-03-05 16:30:21 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Job 3 executed
+2026-03-05 16:30:21 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Completed
+2026-03-05 16:30:21 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Webhook URL: https://chat.googleapis.com/v1/spaces/AAQAwBis3lE/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=R9AoxRqZ-taUFkSAQpK_3O7ekgNVGLmIaRgX4KDMqqQ
+2026-03-05 16:30:22 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Job 4 executed
+2026-03-05 16:30:22 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Completed
+2026-03-05 16:30:22 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Webhook URL: https://chat.googleapis.com/v1/spaces/AAQAwBis3lE/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=R9AoxRqZ-taUFkSAQpK_3O7ekgNVGLmIaRgX4KDMqq
+2026-03-05 16:30:23 [scheduling-1] ERROR c.J.J.service.JobScanner [REQ:] - Job 5 failed
+org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request: "{<EOL>  "error": {<EOL>    "code": 400,<EOL>    "message": "Missing or malformed token in the request. The token can be obtained from incoming webhook configuration screen.",<EOL>    "status": "INVALID_ARGUMENT"<EOL>  }<EOL>}<EOL>"
+	at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:103)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:183)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:137)
+	at org.springframework.web.client.ResponseErrorHandler.handleError(ResponseErrorHandler.java:63)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:942)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:891)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:507)
+	at com.JobSchedulingNotification.JobSchedulingProject.service.WebHookService.send(WebHookService.java:24)
+	at com.JobSchedulingNotification.JobSchedulingProject.service.JobScanner.scanAndExecute(JobScanner.java:43)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at net.javacrumbs.shedlock.core.DefaultLockingTaskExecutor.executeWithLock(DefaultLockingTaskExecutor.java:70)
+	at net.javacrumbs.shedlock.spring.aop.MethodProxyScheduledLockAdvisor$LockingInterceptor.invoke(MethodProxyScheduledLockAdvisor.java:79)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at com.JobSchedulingNotification.JobSchedulingProject.service.JobScanner$$SpringCGLIB$$0.scanAndExecute(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:499)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-03-05 16:30:23 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Completed
+2026-03-05 16:31:19 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-05 16:32:19 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-05 16:32:19 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Webhook URL: https://chat.googleapis.com/v1/spaces/AAQAwBis3lE/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=R9AoxRqZ-taUFkSAQpK_3O7ekgNVGLmIaRgX4KDMqqQ
+2026-03-05 16:32:20 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Job 3 executed
+2026-03-05 16:32:20 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Completed
+2026-03-05 16:33:19 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-05 16:33:19 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Webhook URL: https://chat.googleapis.com/v1/spaces/AAQAwBis3lE/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=R9AoxRqZ-taUFkSAQpK_3O7ekgNVGLmIaRgX4KDMqq
+2026-03-05 16:33:21 [scheduling-1] ERROR c.J.J.service.JobScanner [REQ:] - Job 5 failed
+org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request: "{<EOL>  "error": {<EOL>    "code": 400,<EOL>    "message": "Missing or malformed token in the request. The token can be obtained from incoming webhook configuration screen.",<EOL>    "status": "INVALID_ARGUMENT"<EOL>  }<EOL>}<EOL>"
+	at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:103)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:183)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:137)
+	at org.springframework.web.client.ResponseErrorHandler.handleError(ResponseErrorHandler.java:63)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:942)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:891)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:507)
+	at com.JobSchedulingNotification.JobSchedulingProject.service.WebHookService.send(WebHookService.java:24)
+	at com.JobSchedulingNotification.JobSchedulingProject.service.JobScanner.scanAndExecute(JobScanner.java:43)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at net.javacrumbs.shedlock.core.DefaultLockingTaskExecutor.executeWithLock(DefaultLockingTaskExecutor.java:70)
+	at net.javacrumbs.shedlock.spring.aop.MethodProxyScheduledLockAdvisor$LockingInterceptor.invoke(MethodProxyScheduledLockAdvisor.java:79)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at com.JobSchedulingNotification.JobSchedulingProject.service.JobScanner$$SpringCGLIB$$0.scanAndExecute(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:499)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-03-05 16:33:21 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Completed
+2026-03-05 16:34:19 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-05 16:34:19 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Webhook URL: https://chat.googleapis.com/v1/spaces/AAQAwBis3lE/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=R9AoxRqZ-taUFkSAQpK_3O7ekgNVGLmIaRgX4KDMqqQ
+2026-03-05 16:34:20 [scheduling-1] ERROR c.J.J.service.JobScanner [REQ:] - Job 3 failed
+java.lang.IllegalArgumentException: Cron expression must consist of 6 fields (found 7 in "{
+    "cronExpression":"0 */10 * * * ?"
+}")
+	at org.springframework.scheduling.support.CronExpression.parse(CronExpression.java:182)
+	at com.JobSchedulingNotification.JobSchedulingProject.util.CronUtils.getExecutionTime(CronUtils.java:12)
+	at com.JobSchedulingNotification.JobSchedulingProject.service.JobScanner.scanAndExecute(JobScanner.java:50)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at net.javacrumbs.shedlock.core.DefaultLockingTaskExecutor.executeWithLock(DefaultLockingTaskExecutor.java:70)
+	at net.javacrumbs.shedlock.spring.aop.MethodProxyScheduledLockAdvisor$LockingInterceptor.invoke(MethodProxyScheduledLockAdvisor.java:79)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at com.JobSchedulingNotification.JobSchedulingProject.service.JobScanner$$SpringCGLIB$$0.scanAndExecute(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:499)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-03-05 16:34:20 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Completed
+2026-03-05 16:35:19 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-05 16:36:19 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-05 16:37:19 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-05 16:38:02 [Thread-32] INFO  o.a.coyote.http11.Http11NioProtocol [REQ:] - Stopping ProtocolHandler ["http-nio-8080"]
+2026-03-05 16:38:03 [Thread-32] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-6 - Shutdown initiated...
+2026-03-05 16:38:03 [Thread-32] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-6 - Shutdown completed.
+2026-03-05 16:38:03 [restartedMain] INFO  c.J.J.JobSchedulingProjectApplication [REQ:] - Starting JobSchedulingProjectApplication using Java 17.0.12 with PID 30448 (C:\Users\pulkit.bohra.in\Desktop\JobSchedulingProject\JobSchedulingProject\target\classes started by pulkit.bohra.in in C:\Users\pulkit.bohra.in\Desktop\JobSchedulingProject)
+2026-03-05 16:38:03 [restartedMain] INFO  c.J.J.JobSchedulingProjectApplication [REQ:] - No active profile set, falling back to 1 default profile: "default"
+2026-03-05 16:38:04 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol [REQ:] - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-05 16:38:04 [restartedMain] INFO  o.a.catalina.core.StandardService [REQ:] - Starting service [Tomcat]
+2026-03-05 16:38:04 [restartedMain] INFO  o.a.catalina.core.StandardEngine [REQ:] - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-03-05 16:38:04 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [REQ:] - Initializing Spring embedded WebApplicationContext
+2026-03-05 16:38:04 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper [REQ:] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-05 16:38:04 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator [REQ:] - HHH000026: Second-level cache disabled
+2026-03-05 16:38:04 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-7 - Starting...
+2026-03-05 16:38:04 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool [REQ:] - HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7b51887
+2026-03-05 16:38:04 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-7 - Start completed.
+2026-03-05 16:38:04 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator [REQ:] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-05 16:38:04 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol [REQ:] - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-05 16:38:04 [restartedMain] INFO  c.J.J.JobSchedulingProjectApplication [REQ:] - Started JobSchedulingProjectApplication in 1.695 seconds (process running for 1516.736)
+2026-03-05 16:38:04 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-05 16:38:04 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Webhook URL: https://chat.googleapis.com/v1/spaces/AAQAwBis3lE/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=R9AoxRqZ-taUFkSAQpK_3O7ekgNVGLmIaRgX4KDMqq
+2026-03-05 16:38:06 [scheduling-1] ERROR c.J.J.service.JobScanner [REQ:] - Job 5 failed
+org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request: "{<EOL>  "error": {<EOL>    "code": 400,<EOL>    "message": "Missing or malformed token in the request. The token can be obtained from incoming webhook configuration screen.",<EOL>    "status": "INVALID_ARGUMENT"<EOL>  }<EOL>}<EOL>"
+	at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:103)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:183)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:137)
+	at org.springframework.web.client.ResponseErrorHandler.handleError(ResponseErrorHandler.java:63)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:942)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:891)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:507)
+	at com.JobSchedulingNotification.JobSchedulingProject.service.WebHookService.send(WebHookService.java:24)
+	at com.JobSchedulingNotification.JobSchedulingProject.service.JobScanner.scanAndExecute(JobScanner.java:43)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at net.javacrumbs.shedlock.core.DefaultLockingTaskExecutor.executeWithLock(DefaultLockingTaskExecutor.java:70)
+	at net.javacrumbs.shedlock.spring.aop.MethodProxyScheduledLockAdvisor$LockingInterceptor.invoke(MethodProxyScheduledLockAdvisor.java:79)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at com.JobSchedulingNotification.JobSchedulingProject.service.JobScanner$$SpringCGLIB$$0.scanAndExecute(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:499)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-03-05 16:38:06 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Completed
+2026-03-05 16:38:08 [Thread-36] INFO  o.a.coyote.http11.Http11NioProtocol [REQ:] - Stopping ProtocolHandler ["http-nio-8080"]
+2026-03-05 16:38:08 [Thread-36] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-7 - Shutdown initiated...
+2026-03-05 16:38:08 [Thread-36] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-7 - Shutdown completed.
+2026-03-05 16:38:08 [restartedMain] INFO  c.J.J.JobSchedulingProjectApplication [REQ:] - Starting JobSchedulingProjectApplication using Java 17.0.12 with PID 30448 (C:\Users\pulkit.bohra.in\Desktop\JobSchedulingProject\JobSchedulingProject\target\classes started by pulkit.bohra.in in C:\Users\pulkit.bohra.in\Desktop\JobSchedulingProject)
+2026-03-05 16:38:08 [restartedMain] INFO  c.J.J.JobSchedulingProjectApplication [REQ:] - No active profile set, falling back to 1 default profile: "default"
+2026-03-05 16:38:09 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol [REQ:] - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-05 16:38:09 [restartedMain] INFO  o.a.catalina.core.StandardService [REQ:] - Starting service [Tomcat]
+2026-03-05 16:38:09 [restartedMain] INFO  o.a.catalina.core.StandardEngine [REQ:] - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-03-05 16:38:09 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [REQ:] - Initializing Spring embedded WebApplicationContext
+2026-03-05 16:38:09 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper [REQ:] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-05 16:38:09 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator [REQ:] - HHH000026: Second-level cache disabled
+2026-03-05 16:38:09 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-8 - Starting...
+2026-03-05 16:38:09 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool [REQ:] - HikariPool-8 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4e6ad1f0
+2026-03-05 16:38:09 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-8 - Start completed.
+2026-03-05 16:38:09 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator [REQ:] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-05 16:38:10 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol [REQ:] - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-05 16:38:10 [restartedMain] INFO  c.J.J.JobSchedulingProjectApplication [REQ:] - Started JobSchedulingProjectApplication in 1.477 seconds (process running for 1521.968)
+2026-03-05 16:38:48 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [REQ:] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-05 16:39:10 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-05 16:39:25 [Thread-40] INFO  o.a.coyote.http11.Http11NioProtocol [REQ:] - Stopping ProtocolHandler ["http-nio-8080"]
+2026-03-05 16:39:25 [Thread-40] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-8 - Shutdown initiated...
+2026-03-05 16:39:25 [Thread-40] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-8 - Shutdown completed.
+2026-03-05 16:39:25 [restartedMain] INFO  c.J.J.JobSchedulingProjectApplication [REQ:] - Starting JobSchedulingProjectApplication using Java 17.0.12 with PID 30448 (C:\Users\pulkit.bohra.in\Desktop\JobSchedulingProject\JobSchedulingProject\target\classes started by pulkit.bohra.in in C:\Users\pulkit.bohra.in\Desktop\JobSchedulingProject)
+2026-03-05 16:39:25 [restartedMain] INFO  c.J.J.JobSchedulingProjectApplication [REQ:] - No active profile set, falling back to 1 default profile: "default"
+2026-03-05 16:39:26 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol [REQ:] - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-05 16:39:26 [restartedMain] INFO  o.a.catalina.core.StandardService [REQ:] - Starting service [Tomcat]
+2026-03-05 16:39:26 [restartedMain] INFO  o.a.catalina.core.StandardEngine [REQ:] - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-03-05 16:39:26 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [REQ:] - Initializing Spring embedded WebApplicationContext
+2026-03-05 16:39:26 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper [REQ:] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-05 16:39:26 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator [REQ:] - HHH000026: Second-level cache disabled
+2026-03-05 16:39:26 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-9 - Starting...
+2026-03-05 16:39:26 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool [REQ:] - HikariPool-9 - Added connection com.mysql.cj.jdbc.ConnectionImpl@72cc6c16
+2026-03-05 16:39:26 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-9 - Start completed.
+2026-03-05 16:39:26 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator [REQ:] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-05 16:39:26 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol [REQ:] - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-05 16:39:26 [restartedMain] INFO  c.J.J.JobSchedulingProjectApplication [REQ:] - Started JobSchedulingProjectApplication in 0.782 seconds (process running for 1598.26)
+2026-03-05 16:39:51 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [REQ:] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-05 16:39:57 [Thread-44] INFO  o.a.coyote.http11.Http11NioProtocol [REQ:] - Stopping ProtocolHandler ["http-nio-8080"]
+2026-03-05 16:39:57 [Thread-44] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-9 - Shutdown initiated...
+2026-03-05 16:39:57 [Thread-44] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-9 - Shutdown completed.
+2026-03-05 16:39:57 [restartedMain] INFO  c.J.J.JobSchedulingProjectApplication [REQ:] - Starting JobSchedulingProjectApplication using Java 17.0.12 with PID 30448 (C:\Users\pulkit.bohra.in\Desktop\JobSchedulingProject\JobSchedulingProject\target\classes started by pulkit.bohra.in in C:\Users\pulkit.bohra.in\Desktop\JobSchedulingProject)
+2026-03-05 16:39:57 [restartedMain] INFO  c.J.J.JobSchedulingProjectApplication [REQ:] - No active profile set, falling back to 1 default profile: "default"
+2026-03-05 16:39:57 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol [REQ:] - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-05 16:39:57 [restartedMain] INFO  o.a.catalina.core.StandardService [REQ:] - Starting service [Tomcat]
+2026-03-05 16:39:57 [restartedMain] INFO  o.a.catalina.core.StandardEngine [REQ:] - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-03-05 16:39:57 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [REQ:] - Initializing Spring embedded WebApplicationContext
+2026-03-05 16:39:57 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper [REQ:] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-05 16:39:57 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator [REQ:] - HHH000026: Second-level cache disabled
+2026-03-05 16:39:57 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-10 - Starting...
+2026-03-05 16:39:57 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool [REQ:] - HikariPool-10 - Added connection com.mysql.cj.jdbc.ConnectionImpl@54cea21e
+2026-03-05 16:39:57 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-10 - Start completed.
+2026-03-05 16:39:57 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator [REQ:] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-05 16:39:58 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol [REQ:] - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-05 16:39:58 [restartedMain] INFO  c.J.J.JobSchedulingProjectApplication [REQ:] - Started JobSchedulingProjectApplication in 0.86 seconds (process running for 1629.893)
+2026-03-05 16:39:58 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-05 16:40:07 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [REQ:] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-05 16:40:58 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-05 16:40:58 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Webhook URL: https://chat.googleapis.com/v1/spaces/AAQAwBis3lE/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=R9AoxRqZ-taUFkSAQpK_3O7ekgNVGLmIaRgX4KDMqqQ
+2026-03-05 16:40:58 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Job 3 executed
+2026-03-05 16:40:58 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Completed
+2026-03-05 16:40:58 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Webhook URL: https://chat.googleapis.com/v1/spaces/AAQAwBis3lE/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=R9AoxRqZ-taUFkSAQpK_3O7ekgNVGLmIaRgX4KDMqqQ
+2026-03-05 16:40:59 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Job 4 executed
+2026-03-05 16:40:59 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Completed
+2026-03-05 16:41:29 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-10 - Shutdown initiated...
+2026-03-05 16:41:29 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-10 - Shutdown completed.

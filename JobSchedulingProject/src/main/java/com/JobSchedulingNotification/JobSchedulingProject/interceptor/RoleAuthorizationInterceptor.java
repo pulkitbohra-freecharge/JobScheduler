@@ -26,6 +26,10 @@ public class RoleAuthorizationInterceptor implements HandlerInterceptor {
             response.setStatus(401);
             return false;
         }
+
+        if("GET".equalsIgnoreCase(request.getMethod())){
+            return true;
+        }
         if(request.getRequestURI().contains("/admin")){
 
             if (!user.getRole().getName().equals(RoleConstants.Admin)) {
@@ -34,7 +38,7 @@ public class RoleAuthorizationInterceptor implements HandlerInterceptor {
             }
         }
 
-        if (request.getRequestURI().contains("/jobs")) {
+        if (request.getRequestURI().contains("/api/jobs")) {
             String role = user.getRole().getName();
 
             if (!(role.equalsIgnoreCase(RoleConstants.Admin) ||

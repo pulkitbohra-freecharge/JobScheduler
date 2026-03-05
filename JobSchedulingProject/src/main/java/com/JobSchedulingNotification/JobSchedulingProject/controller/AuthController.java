@@ -5,14 +5,12 @@ import com.JobSchedulingNotification.JobSchedulingProject.dto.request.RegisterRe
 import com.JobSchedulingNotification.JobSchedulingProject.dto.response.LoginResponse;
 import com.JobSchedulingNotification.JobSchedulingProject.dto.response.RegisterResponse;
 import com.JobSchedulingNotification.JobSchedulingProject.service.AuthService;
+import com.JobSchedulingNotification.JobSchedulingProject.service.WebHookService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/auth")
@@ -22,6 +20,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class AuthController {
 
     private final AuthService authService;
+
+    private final WebHookService webHookService;
 
     @PostMapping("/register")
     public RegisterResponse register(@RequestBody RegisterRequest request){
@@ -51,5 +51,13 @@ public class AuthController {
             log.error("Login failed for emaill={}", request.getEmail(), ex);
             throw ex;
         }
+    }
+
+    @GetMapping("/testWebhook")
+    public String testWebhook() {
+        return webHookService.send(
+                "https://chat.googleapis.com/v1/spaces/AAQAwBis3lE/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=R9AoxRqZ-taUFkSAQpK_3O7ekgNVGLmIaRgX4KDMqqQ",
+                "Test from Spring Boot"
+        );
     }
 }

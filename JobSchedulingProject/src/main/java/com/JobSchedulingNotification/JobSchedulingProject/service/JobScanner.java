@@ -9,6 +9,7 @@ import com.JobSchedulingNotification.JobSchedulingProject.repository.JobReposito
 import com.JobSchedulingNotification.JobSchedulingProject.util.CronUtils;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import net.javacrumbs.shedlock.spring.annotation.SchedulerLock;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
@@ -26,10 +27,14 @@ public class JobScanner {
     private final CronUtils cronUtils;
 
     @Scheduled(fixedRate = 60000)
+    @SchedulerLock(name = "JobScannerLock",lockAtMostFor = "5m", lockAtLeastFor = "30s")
     public void scanAndExecute(){
+        log.info("Cron Job Started");
+
         List<Job> jobs= jobRepository.findByActiveTrueAndNextRunTimeLessThanEqual(LocalDateTime.now());
 
         for(Job job: jobs){
+            log.info("Webhook URL: {}", job.getWebHookUrl());
             JobExecutionHistory history= new JobExecutionHistory();
             history.setJobId(job.getId());
             history.setExectuedAt(LocalDateTime.now());
@@ -71,6 +76,8 @@ public class JobScanner {
 
 
             jobRepository.save(job);
+
+            log.info("Cron Job Completed");
         }
     }
 

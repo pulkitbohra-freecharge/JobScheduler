@@ -11,6 +11,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 @Configuration
@@ -24,16 +26,37 @@ public class DataInitializer implements CommandLineRunner {
     @Override
     public void run(String... args){
 
-           Role adminRole = roleRepository.findByName(RoleConstants.Admin)
-                .orElseGet(() -> roleRepository.save(new Role(null,RoleConstants.Admin)));
+        List<String> adminAllowed = List.of(
+                "PUT:/admin/upgrade",
+                "POST:/api/jobs",
+                "GET:/api/jobs",
+                "DELETE:/api/jobs",
+                "PUT:/api/jobs"
+        );
+
+        List<String> managerAllowed = List.of(
+                "POST:/api/jobs",
+                "GET:/api/jobs",
+                "DELETE:/api/jobs",
+                "PUT:/api/jobs"
+        );
+
+        List<String> userAllowed = List.of(
+                "GET:/api/jobs"
+        );
+        Role adminRole = roleRepository.findByName(RoleConstants.Admin)
+                .orElseGet(() -> roleRepository.save(new Role(null, RoleConstants.Admin,adminAllowed,null)));
 
         Role managerRole = roleRepository.findByName(RoleConstants.Manager)
-                .orElseGet(() -> roleRepository.save(new Role(null, RoleConstants.Manager)));
+                .orElseGet(() -> roleRepository.save(new Role(null, RoleConstants.Manager,managerAllowed,null)));
 
 
         Role userRole = roleRepository.findByName(RoleConstants.Basic_User)
-                .orElseGet(() -> roleRepository.save(new Role(null, RoleConstants.Basic_User)));
+                .orElseGet(() -> roleRepository.save(new Role(null, RoleConstants.Basic_User,userAllowed,null)));
 
+        adminRole.buildPermissionMap();
+        managerRole.buildPermissionMap();
+        userRole.buildPermissionMap();
 
         if (userRepository.findByUsername("admin").isEmpty()) {
 

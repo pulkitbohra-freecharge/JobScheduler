@@ -1,12 +1,16 @@
 package com.JobSchedulingNotification.JobSchedulingProject.interceptor;
 
 import com.JobSchedulingNotification.JobSchedulingProject.constants.RoleConstants;
+import com.JobSchedulingNotification.JobSchedulingProject.entity.Role;
 import com.JobSchedulingNotification.JobSchedulingProject.entity.User;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
+
+import java.util.List;
+import java.util.Map;
 
 @Component
 @RequiredArgsConstructor
@@ -27,26 +31,34 @@ public class RoleAuthorizationInterceptor implements HandlerInterceptor {
             return false;
         }
 
-        if("GET".equalsIgnoreCase(request.getMethod())){
-            return true;
-        }
-        if(request.getRequestURI().contains("/admin")){
+        String requestUri= request.getRequestURI();
+        String method=request.getMethod();
 
-            if (!user.getRole().getName().equals(RoleConstants.Admin)) {
-                response.setStatus(403);
-                return false;
-            }
+        Role role=user.getRole();
+
+        Map<String, List<String>> apiMap= role.getApiPermissionMap();
+
+        if(apiMap==null){
+            role.buildPermissionMap();
+            apiMap=role.getApiPermissionMap();
         }
 
-        if (request.getRequestURI().contains("/api/jobs")) {
-            String role = user.getRole().getName();
+        List<String> allowedPaths= apiMap.get(method);
 
-            if (!(role.equalsIgnoreCase(RoleConstants.Admin) ||
-                    role.equalsIgnoreCase(RoleConstants.Manager))) {
-                response.setStatus(403);
-                return false;
-            }
+        if(allowedPaths==null){
+            response.setStatus(403);
+            return false;
         }
+
+        boolean allowed= allowedPaths.stream()
+                .anyMatch(path->requestUri.equals(path)
+                        || requestUri.startsWith(path+"/"));
+
+        if(!allowed){
+            response.setStatus(403);
+            return false;
+        }
+
         return true;
     }
 }

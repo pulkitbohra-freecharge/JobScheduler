@@ -17,8 +17,7 @@ public class UserController {
     private final UserService userService;
 
     @PutMapping("/upgrade/{uuid}")
-    public String upgradeRole(@PathVariable String uuid,
-                              @RequestParam String role) {
+    public String upgradeRole(@PathVariable String uuid, @RequestParam String role) {
 
         UUID userId;
         if(role.equalsIgnoreCase("admin")){

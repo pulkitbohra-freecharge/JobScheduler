@@ -25,8 +25,6 @@ public class ApiListConverter implements AttributeConverter<List<String>,String>
             return List.of();
         }
 
-        return Arrays.stream(dbData.split(","))
-                .map(String::trim)
-                .collect(Collectors.toList());
+        return Arrays.stream(dbData.split(",")).map(String::trim).collect(Collectors.toList());
     }
 }

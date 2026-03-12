@@ -24,8 +24,7 @@ public class AuthService {
     private final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
     String man=RoleConstants.Manager;
     public RegisterResponse register(RegisterRequest request){
-        Role role=roleRepository.findByName(RoleConstants.Basic_User)
-                .orElseThrow(()-> new RuntimeException("Role missing"));
+        Role role=roleRepository.findByName(RoleConstants.Basic_User).orElseThrow(()-> new RuntimeException("Role missing"));
 
         User user = new User();
         user.setEmail(request.getEmail());
@@ -42,16 +41,13 @@ public class AuthService {
     }
 
     public LoginResponse login(LoginRequest request){
-        User user= userRepository.findByEmail(request.getEmail())
-                .orElseThrow(()-> new RuntimeException("Invalid Email"));
+        User user= userRepository.findByEmail(request.getEmail()).orElseThrow(()-> new RuntimeException("Invalid Email"));
 
         if(!encoder.matches(request.getPassword(),user.getPassword())){
             throw new RuntimeException("Invalid Password");
         }
 
-        String token=jwtTokenProvider.generateToken(
-                String.valueOf(user.getUuid()), user.getRole().getName()
-        );
+        String token=jwtTokenProvider.generateToken(String.valueOf(user.getUuid()), user.getRole().getName());
         LoginResponse response = new LoginResponse();
         response.setToken(token);
         response.setUsername(user.getUsername());

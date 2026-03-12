@@ -42,12 +42,7 @@ public class Role {
             return;
         }
 
-        apiPermissionMap=allowedApis.stream().
-                map(api->api.split(":",2))
-                .collect(Collectors.groupingBy(
-                        arr->arr[0],
-                        Collectors.mapping(arr->arr[1],Collectors.toList())
-                ));
+        apiPermissionMap=allowedApis.stream().map(api->api.split(":",2)).collect(Collectors.groupingBy(arr->arr[0], Collectors.mapping(arr->arr[1],Collectors.toList())));
     }
 
 }

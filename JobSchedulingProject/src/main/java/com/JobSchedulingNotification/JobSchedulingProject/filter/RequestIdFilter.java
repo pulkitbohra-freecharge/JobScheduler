@@ -17,10 +17,7 @@ public class RequestIdFilter extends OncePerRequestFilter {
     private static final String REQUEST_ID = "requestId";
 
     @Override
-    protected void doFilterInternal(HttpServletRequest request,
-                                    HttpServletResponse response,
-                                    FilterChain filterChain)
-            throws ServletException, IOException {
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
 
         String requestId = UUID.randomUUID().toString();
         MDC.put(REQUEST_ID, requestId);

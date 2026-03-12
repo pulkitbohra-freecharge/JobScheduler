@@ -22,14 +22,9 @@ public class JobController {
     private final JobService jobService;
 
     @PostMapping
-    public Job createJobs(@RequestBody JobRequest request,
-                             HttpServletRequest httpRequest){
+    public Job createJobs(@RequestBody JobRequest request, HttpServletRequest httpRequest){
 
-        return jobService.createJob(
-                request.getName(),
-                request.getCronExpression(),
-                request.getWebHookUrl()
-        );
+        return jobService.createJob(request.getName(), request.getCronExpression(), request.getWebHookUrl());
 
     }
 

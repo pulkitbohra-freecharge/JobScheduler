@@ -44,15 +44,12 @@ public class DataInitializer implements CommandLineRunner {
         List<String> userAllowed = List.of(
                 "GET:/api/jobs"
         );
-        Role adminRole = roleRepository.findByName(RoleConstants.Admin)
-                .orElseGet(() -> roleRepository.save(new Role(null, RoleConstants.Admin,adminAllowed,null)));
+        Role adminRole = roleRepository.findByName(RoleConstants.Admin).orElseGet(() -> roleRepository.save(new Role(null, RoleConstants.Admin,adminAllowed,null)));
 
-        Role managerRole = roleRepository.findByName(RoleConstants.Manager)
-                .orElseGet(() -> roleRepository.save(new Role(null, RoleConstants.Manager,managerAllowed,null)));
+        Role managerRole = roleRepository.findByName(RoleConstants.Manager).orElseGet(() -> roleRepository.save(new Role(null, RoleConstants.Manager,managerAllowed,null)));
 
 
-        Role userRole = roleRepository.findByName(RoleConstants.Basic_User)
-                .orElseGet(() -> roleRepository.save(new Role(null, RoleConstants.Basic_User,userAllowed,null)));
+        Role userRole = roleRepository.findByName(RoleConstants.Basic_User).orElseGet(() -> roleRepository.save(new Role(null, RoleConstants.Basic_User,userAllowed,null)));
 
         adminRole.buildPermissionMap();
         managerRole.buildPermissionMap();

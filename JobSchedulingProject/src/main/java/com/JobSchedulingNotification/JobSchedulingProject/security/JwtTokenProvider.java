@@ -18,21 +18,11 @@ public class JwtTokenProvider {
     private long expiration;
 
     public String generateToken(String uuid, String role) {
-        return Jwts.builder()
-                .setSubject(uuid)
-                .claim("role", role)
-                .setIssuedAt(new Date())
-                .setExpiration(new Date(System.currentTimeMillis() + expiration))
-                .signWith(Keys.hmacShaKeyFor(secret.getBytes()))
-                .compact();
+        return Jwts.builder().setSubject(uuid).claim("role", role).setIssuedAt(new Date()).setExpiration(new Date(System.currentTimeMillis() + expiration)).signWith(Keys.hmacShaKeyFor(secret.getBytes())).compact();
     }
 
     public Claims validateToken(String token) {
-        return Jwts.parserBuilder()
-                .setSigningKey(secret.getBytes())
-                .build()
-                .parseClaimsJws(token)
-                .getBody();
+        return Jwts.parserBuilder().setSigningKey(secret.getBytes()).build().parseClaimsJws(token).getBody();
     }
 
 }

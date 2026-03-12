@@ -24,3 +24,318 @@
 2026-03-11 12:54:40 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
 2026-03-11 12:54:53 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-1 - Shutdown initiated...
 2026-03-11 12:54:53 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-1 - Shutdown completed.
+2026-03-11 12:55:40 [background-preinit] INFO  o.h.validator.internal.util.Version [REQ:] - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-11 12:55:40 [restartedMain] INFO  c.J.J.JobSchedulingProjectApplication [REQ:] - Starting JobSchedulingProjectApplication using Java 17.0.12 with PID 1504 (C:\Users\pulkit.bohra.in\Desktop\JobSchedulingProject\JobSchedulingProject\target\classes started by pulkit.bohra.in in C:\Users\pulkit.bohra.in\Desktop\JobSchedulingProject)
+2026-03-11 12:55:40 [restartedMain] INFO  c.J.J.JobSchedulingProjectApplication [REQ:] - No active profile set, falling back to 1 default profile: "default"
+2026-03-11 12:55:42 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol [REQ:] - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-11 12:55:42 [restartedMain] INFO  o.a.catalina.core.StandardService [REQ:] - Starting service [Tomcat]
+2026-03-11 12:55:42 [restartedMain] INFO  o.a.catalina.core.StandardEngine [REQ:] - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-03-11 12:55:42 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [REQ:] - Initializing Spring embedded WebApplicationContext
+2026-03-11 12:55:42 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper [REQ:] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-11 12:55:42 [restartedMain] INFO  org.hibernate.Version [REQ:] - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-11 12:55:42 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator [REQ:] - HHH000026: Second-level cache disabled
+2026-03-11 12:55:43 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-1 - Starting...
+2026-03-11 12:55:43 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool [REQ:] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@49ed502c
+2026-03-11 12:55:43 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-1 - Start completed.
+2026-03-11 12:55:44 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator [REQ:] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-11 12:55:45 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol [REQ:] - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-11 12:55:45 [restartedMain] INFO  c.J.J.JobSchedulingProjectApplication [REQ:] - Started JobSchedulingProjectApplication in 4.978 seconds (process running for 5.455)
+2026-03-11 12:55:45 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-11 12:56:45 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-11 12:56:47 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [REQ:] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-11 12:56:47 [http-nio-8080-exec-1] INFO  c.J.J.controller.AuthController [REQ:a613967f-ab22-4484-8cb1-85ac8c0d824f] - Login API called for email: manager@gmail.com
+2026-03-11 12:56:47 [http-nio-8080-exec-1] ERROR c.J.J.controller.AuthController [REQ:a613967f-ab22-4484-8cb1-85ac8c0d824f] - Login failed for emaill=manager@gmail.com
+java.lang.RuntimeException: Invalid Email
+	at com.JobSchedulingNotification.JobSchedulingProject.service.AuthService.lambda$login$1(AuthService.java:46)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at com.JobSchedulingNotification.JobSchedulingProject.service.AuthService.login(AuthService.java:46)
+	at com.JobSchedulingNotification.JobSchedulingProject.controller.AuthController.login(AuthController.java:46)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at com.JobSchedulingNotification.JobSchedulingProject.filter.RequestIdFilter.doFilterInternal(RequestIdFilter.java:29)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-03-11 12:57:28 [http-nio-8080-exec-4] INFO  c.J.J.controller.AuthController [REQ:83bbae3c-e2a7-4f89-8e37-22147b925818] - Register API called for email: manager@gmail.com
+2026-03-11 12:57:28 [http-nio-8080-exec-4] INFO  c.J.J.controller.AuthController [REQ:83bbae3c-e2a7-4f89-8e37-22147b925818] - User registered successfully: email=manager@gmail.com, username=Manager, userId=1c639bf0-4448-4332-bf23-0949d8357e4b
+2026-03-11 12:57:44 [http-nio-8080-exec-5] INFO  c.J.J.controller.AuthController [REQ:2dcf3da8-d582-4f86-b3a2-56e0ff1213f6] - Register API called for email: user@gmail.com
+2026-03-11 12:57:44 [http-nio-8080-exec-5] INFO  c.J.J.controller.AuthController [REQ:2dcf3da8-d582-4f86-b3a2-56e0ff1213f6] - User registered successfully: email=user@gmail.com, username=user, userId=8476e908-f21a-42e6-a72a-9230d21f7af7
+2026-03-11 12:57:45 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-11 12:58:04 [http-nio-8080-exec-6] INFO  c.J.J.controller.AuthController [REQ:bb11d4fd-4bed-45b8-a70b-2fb08dcb4acf] - Login API called for email: admin@gmail.com
+2026-03-11 12:58:04 [http-nio-8080-exec-6] INFO  c.J.J.controller.AuthController [REQ:bb11d4fd-4bed-45b8-a70b-2fb08dcb4acf] - User login successful:email=admin@gmail.com, username=admin, userId=438e08cf-ff4f-4c3b-b8fb-0324c4071719
+2026-03-11 12:58:45 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-11 12:59:17 [http-nio-8080-exec-9] INFO  c.J.J.controller.AuthController [REQ:9538dd87-60df-480d-a42e-397ad596e3c7] - Login API called for email: manager@gmail.com
+2026-03-11 12:59:17 [http-nio-8080-exec-9] INFO  c.J.J.controller.AuthController [REQ:9538dd87-60df-480d-a42e-397ad596e3c7] - User login successful:email=manager@gmail.com, username=Manager, userId=1c639bf0-4448-4332-bf23-0949d8357e4b
+2026-03-11 12:59:45 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-11 12:59:51 [http-nio-8080-exec-1] INFO  c.J.J.controller.UserController [REQ:86328a96-f785-4a76-936d-1344b5670016] - Role upgrade API called for userId=1c639bf0-4448-4332-bf23-0949d8357e4b, requestedRole=MANAGER
+2026-03-11 13:00:45 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-11 13:01:39 [http-nio-8080-exec-5] INFO  c.J.J.controller.AuthController [REQ:b456f830-9880-46c5-8997-c8efff0b247c] - Login API called for email: user@gmail.com
+2026-03-11 13:01:39 [http-nio-8080-exec-5] INFO  c.J.J.controller.AuthController [REQ:b456f830-9880-46c5-8997-c8efff0b247c] - User login successful:email=user@gmail.com, username=user, userId=8476e908-f21a-42e6-a72a-9230d21f7af7
+2026-03-11 13:01:45 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-11 13:02:45 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-11 13:03:45 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-11 13:04:45 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-11 13:04:45 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Webhook URL: https://chat.googleapis.com/v1/spaces/AAQAwBis3lE/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=R9AoxRqZ-taUFkSAQpK_3O7ekgNVGLmIaRgX4KDMqqQ
+2026-03-11 13:04:46 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Job 1 executed
+2026-03-11 13:04:46 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Completed
+2026-03-11 13:05:45 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-11 13:06:45 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-11 13:06:45 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Webhook URL: https://chat.googleapis.com/v1/spaces/AAQAwBis3lE/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=R9AoxRqZ-taUFkSAQpK_3O7ekgNVGLmIaRgX4KDMqqQ
+2026-03-11 13:06:46 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Job 1 executed
+2026-03-11 13:06:46 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Completed
+2026-03-11 13:06:46 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Webhook URL: https://chat.googleapis.com/v1/spaces/AAQAwBis3lE/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=R9AoxRqZ-taUFkSAQpK_3O7ekgNVGLmIaRgX4KDMqqQ
+2026-03-11 13:06:47 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Job 2 executed
+2026-03-11 13:06:47 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Completed
+2026-03-11 13:07:45 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-11 13:08:45 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-11 13:08:45 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Webhook URL: https://chat.googleapis.com/v1/spaces/AAQAwBis3lE/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=R9AoxRqZ-taUFkSAQpK_3O7ekgNVGLmIaRgX4KDMqqQ
+2026-03-11 13:08:46 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Job 2 executed
+2026-03-11 13:08:46 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Completed
+2026-03-11 13:09:45 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-11 13:09:45 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Webhook URL: https://chat.googleapis.com/v1/spaces/AAQAwBis3lE/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=R9AoxRqZ-taUFkSAQpK_3O7ekgNVGLmIaRgX4KDMqq
+2026-03-11 13:09:46 [scheduling-1] ERROR c.J.J.service.JobScanner [REQ:] - Job 3 failed
+org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request: "{<EOL>  "error": {<EOL>    "code": 400,<EOL>    "message": "Missing or malformed token in the request. The token can be obtained from incoming webhook configuration screen.",<EOL>    "status": "INVALID_ARGUMENT"<EOL>  }<EOL>}<EOL>"
+	at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:103)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:183)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:137)
+	at org.springframework.web.client.ResponseErrorHandler.handleError(ResponseErrorHandler.java:63)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:942)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:891)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:507)
+	at com.JobSchedulingNotification.JobSchedulingProject.service.WebHookService.send(WebHookService.java:24)
+	at com.JobSchedulingNotification.JobSchedulingProject.service.JobScanner.scanAndExecute(JobScanner.java:43)
+	at jdk.internal.reflect.GeneratedMethodAccessor22.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at net.javacrumbs.shedlock.core.DefaultLockingTaskExecutor.executeWithLock(DefaultLockingTaskExecutor.java:70)
+	at net.javacrumbs.shedlock.spring.aop.MethodProxyScheduledLockAdvisor$LockingInterceptor.invoke(MethodProxyScheduledLockAdvisor.java:79)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at com.JobSchedulingNotification.JobSchedulingProject.service.JobScanner$$SpringCGLIB$$0.scanAndExecute(<generated>)
+	at jdk.internal.reflect.GeneratedMethodAccessor22.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:499)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-03-11 13:09:46 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Completed
+2026-03-11 13:10:45 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-11 13:10:45 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Webhook URL: https://chat.googleapis.com/v1/spaces/AAQAwBis3lE/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=R9AoxRqZ-taUFkSAQpK_3O7ekgNVGLmIaRgX4KDMqqQ
+2026-03-11 13:10:46 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Job 1 executed
+2026-03-11 13:10:46 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Completed
+2026-03-11 13:11:45 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-11 13:12:45 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-11 13:12:45 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Webhook URL: https://chat.googleapis.com/v1/spaces/AAQAwBis3lE/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=R9AoxRqZ-taUFkSAQpK_3O7ekgNVGLmIaRgX4KDMqqQ
+2026-03-11 13:12:46 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Job 2 executed
+2026-03-11 13:12:46 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Completed
+2026-03-11 13:12:46 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Webhook URL: https://chat.googleapis.com/v1/spaces/AAQAwBis3lE/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=R9AoxRqZ-taUFkSAQpK_3O7ekgNVGLmIaRgX4KDMqq
+2026-03-11 13:12:47 [scheduling-1] ERROR c.J.J.service.JobScanner [REQ:] - Job 3 failed
+org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request: "{<EOL>  "error": {<EOL>    "code": 400,<EOL>    "message": "Missing or malformed token in the request. The token can be obtained from incoming webhook configuration screen.",<EOL>    "status": "INVALID_ARGUMENT"<EOL>  }<EOL>}<EOL>"
+	at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:103)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:183)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:137)
+	at org.springframework.web.client.ResponseErrorHandler.handleError(ResponseErrorHandler.java:63)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:942)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:891)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:507)
+	at com.JobSchedulingNotification.JobSchedulingProject.service.WebHookService.send(WebHookService.java:24)
+	at com.JobSchedulingNotification.JobSchedulingProject.service.JobScanner.scanAndExecute(JobScanner.java:43)
+	at jdk.internal.reflect.GeneratedMethodAccessor22.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at net.javacrumbs.shedlock.core.DefaultLockingTaskExecutor.executeWithLock(DefaultLockingTaskExecutor.java:70)
+	at net.javacrumbs.shedlock.spring.aop.MethodProxyScheduledLockAdvisor$LockingInterceptor.invoke(MethodProxyScheduledLockAdvisor.java:79)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at com.JobSchedulingNotification.JobSchedulingProject.service.JobScanner$$SpringCGLIB$$0.scanAndExecute(<generated>)
+	at jdk.internal.reflect.GeneratedMethodAccessor22.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:499)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-03-11 13:12:47 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Completed
+2026-03-11 13:13:45 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-11 13:14:45 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-11 13:15:45 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-11 13:16:45 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-11 13:16:45 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Webhook URL: https://chat.googleapis.com/v1/spaces/AAQAwBis3lE/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=R9AoxRqZ-taUFkSAQpK_3O7ekgNVGLmIaRgX4KDMqqQ
+2026-03-11 13:16:46 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Job 2 executed
+2026-03-11 13:16:46 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Completed
+2026-03-11 13:17:45 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-11 13:17:45 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Webhook URL: https://chat.googleapis.com/v1/spaces/AAQAwBis3lE/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=R9AoxRqZ-taUFkSAQpK_3O7ekgNVGLmIaRgX4KDMqq
+2026-03-11 13:17:47 [scheduling-1] ERROR c.J.J.service.JobScanner [REQ:] - Job 3 failed
+org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request: "{<EOL>  "error": {<EOL>    "code": 400,<EOL>    "message": "Missing or malformed token in the request. The token can be obtained from incoming webhook configuration screen.",<EOL>    "status": "INVALID_ARGUMENT"<EOL>  }<EOL>}<EOL>"
+	at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:103)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:183)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:137)
+	at org.springframework.web.client.ResponseErrorHandler.handleError(ResponseErrorHandler.java:63)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:942)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:891)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:507)
+	at com.JobSchedulingNotification.JobSchedulingProject.service.WebHookService.send(WebHookService.java:24)
+	at com.JobSchedulingNotification.JobSchedulingProject.service.JobScanner.scanAndExecute(JobScanner.java:43)
+	at jdk.internal.reflect.GeneratedMethodAccessor22.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at net.javacrumbs.shedlock.core.DefaultLockingTaskExecutor.executeWithLock(DefaultLockingTaskExecutor.java:70)
+	at net.javacrumbs.shedlock.spring.aop.MethodProxyScheduledLockAdvisor$LockingInterceptor.invoke(MethodProxyScheduledLockAdvisor.java:79)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at com.JobSchedulingNotification.JobSchedulingProject.service.JobScanner$$SpringCGLIB$$0.scanAndExecute(<generated>)
+	at jdk.internal.reflect.GeneratedMethodAccessor22.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:499)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-03-11 13:17:47 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Completed
+2026-03-11 13:18:45 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-11 13:19:45 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-11 13:20:45 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-11 13:20:45 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Webhook URL: https://chat.googleapis.com/v1/spaces/AAQAwBis3lE/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=R9AoxRqZ-taUFkSAQpK_3O7ekgNVGLmIaRgX4KDMqqQ
+2026-03-11 13:20:46 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Job 1 executed
+2026-03-11 13:20:46 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Completed
+2026-03-11 13:20:46 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Webhook URL: https://chat.googleapis.com/v1/spaces/AAQAwBis3lE/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=R9AoxRqZ-taUFkSAQpK_3O7ekgNVGLmIaRgX4KDMqqQ
+2026-03-11 13:20:46 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Job 2 executed
+2026-03-11 13:20:46 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Completed
+2026-03-11 13:21:45 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-11 13:22:45 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-11 13:23:45 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-11 13:24:45 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Started
+2026-03-11 13:24:45 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Webhook URL: https://chat.googleapis.com/v1/spaces/AAQAwBis3lE/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=R9AoxRqZ-taUFkSAQpK_3O7ekgNVGLmIaRgX4KDMqqQ
+2026-03-11 13:24:46 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Job 2 executed
+2026-03-11 13:24:46 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Completed
+2026-03-11 13:24:46 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Webhook URL: https://chat.googleapis.com/v1/spaces/AAQAwBis3lE/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=R9AoxRqZ-taUFkSAQpK_3O7ekgNVGLmIaRgX4KDMqq
+2026-03-11 13:24:47 [scheduling-1] ERROR c.J.J.service.JobScanner [REQ:] - Job 3 failed
+org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request: "{<EOL>  "error": {<EOL>    "code": 400,<EOL>    "message": "Missing or malformed token in the request. The token can be obtained from incoming webhook configuration screen.",<EOL>    "status": "INVALID_ARGUMENT"<EOL>  }<EOL>}<EOL>"
+	at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:103)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:183)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:137)
+	at org.springframework.web.client.ResponseErrorHandler.handleError(ResponseErrorHandler.java:63)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:942)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:891)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:507)
+	at com.JobSchedulingNotification.JobSchedulingProject.service.WebHookService.send(WebHookService.java:24)
+	at com.JobSchedulingNotification.JobSchedulingProject.service.JobScanner.scanAndExecute(JobScanner.java:43)
+	at jdk.internal.reflect.GeneratedMethodAccessor22.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at net.javacrumbs.shedlock.core.DefaultLockingTaskExecutor.executeWithLock(DefaultLockingTaskExecutor.java:70)
+	at net.javacrumbs.shedlock.spring.aop.MethodProxyScheduledLockAdvisor$LockingInterceptor.invoke(MethodProxyScheduledLockAdvisor.java:79)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at com.JobSchedulingNotification.JobSchedulingProject.service.JobScanner$$SpringCGLIB$$0.scanAndExecute(<generated>)
+	at jdk.internal.reflect.GeneratedMethodAccessor22.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:499)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-03-11 13:24:47 [scheduling-1] INFO  c.J.J.service.JobScanner [REQ:] - Cron Job Completed
+2026-03-11 13:25:07 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-1 - Shutdown initiated...
+2026-03-11 13:25:07 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [REQ:] - HikariPool-1 - Shutdown completed.

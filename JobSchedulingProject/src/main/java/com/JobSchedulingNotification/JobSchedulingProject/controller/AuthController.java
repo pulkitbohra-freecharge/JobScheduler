@@ -29,9 +29,7 @@ public class AuthController {
 
         try {
             RegisterResponse response = authService.register(request);
-            log.info("User registered successfully: email={}, username={}, userId={}",
-                    response.getEmail(), response.getUsername(), response.getUuid());
-            return response;
+            log.info("User registered successfully: email={}, username={}, userId={}", response.getEmail(), response.getUsername(), response.getUuid());return response;
         } catch (Exception ex) {
             log.error("Error while registering user: username={}", request.getUsername(), ex);
             throw ex;
@@ -44,9 +42,7 @@ public class AuthController {
 
         try {
             LoginResponse response = authService.login(request);
-            log.info("User login successful:email={}, username={}, userId={}",
-                    response.getEmail(),response.getUsername(), response.getUuid());
-            return response;
+            log.info("User login successful:email={}, username={}, userId={}", response.getEmail(),response.getUsername(), response.getUuid());return response;
         } catch (Exception ex) {
             log.error("Login failed for emaill={}", request.getEmail(), ex);
             throw ex;
@@ -55,9 +51,6 @@ public class AuthController {
 
     @GetMapping("/testWebhook")
     public String testWebhook() {
-        return webHookService.send(
-                "https://chat.googleapis.com/v1/spaces/AAQAwBis3lE/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=R9AoxRqZ-taUFkSAQpK_3O7ekgNVGLmIaRgX4KDMqqQ",
-                "Test from Spring Boot"
-        );
+        return webHookService.send("https://chat.googleapis.com/v1/spaces/AAQAwBis3lE/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=R9AoxRqZ-taUFkSAQpK_3O7ekgNVGLmIaRgX4KDMqqQ", "Test from Spring Boot");
     }
 }

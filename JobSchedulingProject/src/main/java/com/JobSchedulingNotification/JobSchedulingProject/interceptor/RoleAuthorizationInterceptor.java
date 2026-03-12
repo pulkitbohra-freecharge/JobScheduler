@@ -17,9 +17,7 @@ import java.util.Map;
 public class RoleAuthorizationInterceptor implements HandlerInterceptor {
 
     @Override
-    public boolean preHandle(HttpServletRequest request,
-                             HttpServletResponse response,
-                             Object handler) throws Exception {
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 
         if (request.getRequestURI().contains("/auth")) {
             return true;
@@ -50,9 +48,7 @@ public class RoleAuthorizationInterceptor implements HandlerInterceptor {
             return false;
         }
 
-        boolean allowed= allowedPaths.stream()
-                .anyMatch(path->requestUri.equals(path)
-                        || requestUri.startsWith(path+"/"));
+        boolean allowed= allowedPaths.stream().anyMatch(path->requestUri.equals(path) || requestUri.startsWith(path+"/"));
 
         if(!allowed){
             response.setStatus(403);

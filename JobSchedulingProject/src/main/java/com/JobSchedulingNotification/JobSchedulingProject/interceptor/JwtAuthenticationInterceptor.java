@@ -21,9 +21,7 @@ public class JwtAuthenticationInterceptor implements HandlerInterceptor {
         private final UserRepository userRepository;
 
         @Override
-        public boolean preHandle(HttpServletRequest request,
-                                 HttpServletResponse response,
-                                 Object handler ) throws Exception{
+        public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler ) throws Exception{
 
 
             String path= request.getRequestURI();
@@ -44,8 +42,7 @@ public class JwtAuthenticationInterceptor implements HandlerInterceptor {
 
             Claims claims =jwtTokenProvider.validateToken(token);
 
-            User user =userRepository.findByUuid(UUID.fromString(claims.getSubject()))
-                    .orElseThrow(()-> new RuntimeException("User not found"));
+            User user =userRepository.findByUuid(UUID.fromString(claims.getSubject())).orElseThrow(()-> new RuntimeException("User not found"));
             request.setAttribute("loggedInUser",user);
 
             return true;

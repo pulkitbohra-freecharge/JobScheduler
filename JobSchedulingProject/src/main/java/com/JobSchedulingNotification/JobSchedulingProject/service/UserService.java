@@ -18,11 +18,9 @@ public class UserService {
 
     public String upgradeRole(UUID uuid, String rolename){
 
-        User user=userRepository.findByUuid(uuid)
-                .orElseThrow(()->new RuntimeException("Invalid UUID"));
+        User user=userRepository.findByUuid(uuid).orElseThrow(()->new RuntimeException("Invalid UUID"));
 
-        Role role=roleRepository.findByName(rolename.toUpperCase())
-                .orElseThrow(()->new RuntimeException("Invalid Role"));
+        Role role=roleRepository.findByName(rolename.toUpperCase()).orElseThrow(()->new RuntimeException("Invalid Role"));
 
         user.setRole(role);
         userRepository.save(user);

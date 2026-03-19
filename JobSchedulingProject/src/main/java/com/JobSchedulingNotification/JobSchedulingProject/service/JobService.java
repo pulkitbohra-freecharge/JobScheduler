@@ -72,7 +72,7 @@ public class JobService {
         Job job =getJobById(id);
 
         if(cronExpression == null || cronExpression.isEmpty()){
-            throw new AppException(ErrorCodes.INVALID_CREDENTIALS_CODE,ErrorCodes.INVALID_CRON_MSG,400);
+            throw new AppException(ErrorCodes.INVALID_CRON_CODE,ErrorCodes.INVALID_CRON_MSG,400);
         }
 
         job.setCronExpression(cronExpression);

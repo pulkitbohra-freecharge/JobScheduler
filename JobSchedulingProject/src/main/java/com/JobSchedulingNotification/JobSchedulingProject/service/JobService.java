@@ -1,10 +1,12 @@
 package com.JobSchedulingNotification.JobSchedulingProject.service;
 
+import com.JobSchedulingNotification.JobSchedulingProject.constants.ErrorCodes;
 import com.JobSchedulingNotification.JobSchedulingProject.constants.JobStatus;
 import com.JobSchedulingNotification.JobSchedulingProject.dto.request.JobRequest;
 import com.JobSchedulingNotification.JobSchedulingProject.entity.Job;
 import com.JobSchedulingNotification.JobSchedulingProject.entity.JobExecutionHistory;
 import com.JobSchedulingNotification.JobSchedulingProject.entity.User;
+import com.JobSchedulingNotification.JobSchedulingProject.exception.AppException;
 import com.JobSchedulingNotification.JobSchedulingProject.exception.ResourceNotFoundException;
 import com.JobSchedulingNotification.JobSchedulingProject.repository.JobExecutionHistoryRepository;
 import com.JobSchedulingNotification.JobSchedulingProject.repository.JobRepository;
@@ -46,7 +48,7 @@ public class JobService {
         List<Job> jobs= jobRepository.findAll();
 
         if(jobs.isEmpty()){
-            throw new ResourceNotFoundException("No jobs found in the system");
+            throw new AppException(ErrorCodes.NO_JOBS_FOUND_CODE,ErrorCodes.NO_JOBS_FOUND_MSG,404);
         }
 
         return jobs;
@@ -55,7 +57,7 @@ public class JobService {
     public Job getJobById(Long jobId){
 
         return jobRepository.findById(jobId).
-                orElseThrow(()->new RuntimeException("Job Not found"));
+                orElseThrow(()->new AppException(ErrorCodes.JOB_NOT_FOUND_CODE,ErrorCodes.JOB_NOT_FOUND_MSG + "with id"+ jobId,404));
     }
 
 
@@ -70,7 +72,7 @@ public class JobService {
         Job job =getJobById(id);
 
         if(cronExpression == null || cronExpression.isEmpty()){
-            throw new IllegalArgumentException("Cron expression cannot be empty");
+            throw new AppException(ErrorCodes.INVALID_CREDENTIALS_CODE,ErrorCodes.INVALID_CRON_MSG,400);
         }
 
         job.setCronExpression(cronExpression);
@@ -94,6 +96,7 @@ public class JobService {
         if(job.getRetryCount()< job.getMaxRetries())
             job.setActive(true);
 
+
         return jobRepository.save(job);
     }
 
@@ -104,7 +107,7 @@ public class JobService {
         List<JobExecutionHistory> jobHistory= jobExecutionHistoryRepository.findByJobId(id);
 
         if(jobHistory.isEmpty()){
-            throw new ResourceNotFoundException("No execution History found for job id: "+ id);
+            throw new AppException(ErrorCodes.JOB_HISTORY_NOT_FOUND_CODE,ErrorCodes.JOB_HISTORY_NOT_FOUND_MSG+ "with id"+id,404);
         }
 
         return jobHistory;
@@ -118,11 +121,10 @@ public class JobService {
         Job job =getJobById(id);
 
         if(job.getNextRunTime() == null){
-            throw new ResourceNotFoundException("Next run time not scheduled for job id: " + id);
+            throw new AppException(ErrorCodes.NEXT_RUN_NOT_FOUND_CODE,ErrorCodes.NEXT_RUN_NOT_FOUND_MSG+"with id"+id,404);
         }
 
         return job.getNextRunTime();
     }
-
 
 }

@@ -1,5 +1,6 @@
 package com.JobSchedulingNotification.JobSchedulingProject.service;
 
+import com.JobSchedulingNotification.JobSchedulingProject.constants.ErrorCodes;
 import com.JobSchedulingNotification.JobSchedulingProject.constants.RoleConstants;
 import com.JobSchedulingNotification.JobSchedulingProject.dto.request.LoginRequest;
 import com.JobSchedulingNotification.JobSchedulingProject.dto.request.RegisterRequest;
@@ -7,6 +8,7 @@ import com.JobSchedulingNotification.JobSchedulingProject.dto.response.LoginResp
 import com.JobSchedulingNotification.JobSchedulingProject.dto.response.RegisterResponse;
 import com.JobSchedulingNotification.JobSchedulingProject.entity.Role;
 import com.JobSchedulingNotification.JobSchedulingProject.entity.User;
+import com.JobSchedulingNotification.JobSchedulingProject.exception.AppException;
 import com.JobSchedulingNotification.JobSchedulingProject.repository.RoleRepository;
 import com.JobSchedulingNotification.JobSchedulingProject.repository.UserRepository;
 import com.JobSchedulingNotification.JobSchedulingProject.security.JwtTokenProvider;
@@ -44,7 +46,7 @@ public class AuthService {
         User user= userRepository.findByEmail(request.getEmail()).orElseThrow(()-> new RuntimeException("Invalid Email"));
 
         if(!encoder.matches(request.getPassword(),user.getPassword())){
-            throw new RuntimeException("Invalid Password");
+            throw new AppException(ErrorCodes.INVALID_CREDENTIALS_CODE,ErrorCodes.INVALID_CREDENTIALS_MSG,401);
         }
 
         String token=jwtTokenProvider.generateToken(String.valueOf(user.getUuid()), user.getRole().getName());

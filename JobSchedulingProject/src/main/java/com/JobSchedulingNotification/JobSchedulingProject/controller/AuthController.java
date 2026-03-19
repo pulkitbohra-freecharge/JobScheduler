@@ -6,6 +6,7 @@ import com.JobSchedulingNotification.JobSchedulingProject.dto.response.LoginResp
 import com.JobSchedulingNotification.JobSchedulingProject.dto.response.RegisterResponse;
 import com.JobSchedulingNotification.JobSchedulingProject.service.AuthService;
 import com.JobSchedulingNotification.JobSchedulingProject.service.WebHookService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +25,7 @@ public class AuthController {
     private final WebHookService webHookService;
 
     @PostMapping("/register")
-    public RegisterResponse register(@RequestBody RegisterRequest request){
+    public RegisterResponse register(@Valid @RequestBody RegisterRequest request){
         log.info("Register API called for email: {}", request.getEmail());
 
         try {
@@ -37,7 +38,7 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public LoginResponse login(@RequestBody LoginRequest request){
+    public LoginResponse login(@Valid @RequestBody LoginRequest request){
         log.info("Login API called for email: {}", request.getEmail());
 
         try {

@@ -1,7 +1,9 @@
 package com.JobSchedulingNotification.JobSchedulingProject.service;
 
+import com.JobSchedulingNotification.JobSchedulingProject.constants.ErrorCodes;
 import com.JobSchedulingNotification.JobSchedulingProject.entity.Role;
 import com.JobSchedulingNotification.JobSchedulingProject.entity.User;
+import com.JobSchedulingNotification.JobSchedulingProject.exception.AppException;
 import com.JobSchedulingNotification.JobSchedulingProject.repository.RoleRepository;
 import com.JobSchedulingNotification.JobSchedulingProject.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -20,7 +22,7 @@ public class UserService {
 
         User user=userRepository.findByUuid(uuid).orElseThrow(()->new RuntimeException("Invalid UUID"));
 
-        Role role=roleRepository.findByName(rolename.toUpperCase()).orElseThrow(()->new RuntimeException("Invalid Role"));
+        Role role=roleRepository.findByName(rolename.toUpperCase()).orElseThrow(()->new AppException(ErrorCodes.ROLE_NOT_FOUND_CODE,ErrorCodes.ROLE_NOT_FOUND_MSG,401));
 
         user.setRole(role);
         userRepository.save(user);

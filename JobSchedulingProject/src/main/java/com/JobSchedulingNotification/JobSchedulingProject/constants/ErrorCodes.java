@@ -34,6 +34,9 @@ public class ErrorCodes {
     public static final String NEXT_RUN_NOT_FOUND_CODE = "ERR011";
     public static final String NEXT_RUN_NOT_FOUND_MSG = "Next run time not scheduled";
 
+    public static final String INVALID_UUID_CODE = "ERR012";
+    public static final String INVALID_UUID_MSG = "UUID not found";
+
     public static final String VALIDATION_ERROR_CODE = "ERR400";
     public static final String VALIDATION_ERROR_MSG = "Validation failed";
 }

@@ -37,6 +37,9 @@ public class ErrorCodes {
     public static final String INVALID_UUID_CODE = "ERR012";
     public static final String INVALID_UUID_MSG = "UUID not found";
 
+    public static final String ROLE_MISSING_CODE = "ERR013";
+    public static final String ROLE_MISSING_MSG = "Role not found";
+
     public static final String VALIDATION_ERROR_CODE = "ERR400";
     public static final String VALIDATION_ERROR_MSG = "Validation failed";
 }

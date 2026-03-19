@@ -26,7 +26,7 @@ public class AuthService {
     private final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
     String man=RoleConstants.Manager;
     public RegisterResponse register(RegisterRequest request){
-        Role role=roleRepository.findByName(RoleConstants.Basic_User).orElseThrow(()-> new RuntimeException("Role missing"));
+        Role role=roleRepository.findByName(RoleConstants.Basic_User).orElseThrow(()-> new AppException(ErrorCodes.ROLE_MISSING_CODE,ErrorCodes.ROLE_MISSING_MSG,404));
 
         User user = new User();
         user.setEmail(request.getEmail());
@@ -43,7 +43,7 @@ public class AuthService {
     }
 
     public LoginResponse login(LoginRequest request){
-        User user= userRepository.findByEmail(request.getEmail()).orElseThrow(()-> new RuntimeException("Invalid Email"));
+        User user= userRepository.findByEmail(request.getEmail()).orElseThrow(()-> new AppException(ErrorCodes.USER_NOT_FOUND_CODE,ErrorCodes.USER_NOT_FOUND_MSG,404));
 
         if(!encoder.matches(request.getPassword(),user.getPassword())){
             throw new AppException(ErrorCodes.INVALID_CREDENTIALS_CODE,ErrorCodes.INVALID_CREDENTIALS_MSG,401);
